@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "406881431820",
+    "firebase_url": "https://uit-smart-building.firebaseio.com",
+    "project_id": "uit-smart-building",
+    "storage_bucket": "uit-smart-building.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406881431820:android:2bc051ee986431f4",
+        "android_client_info": {
+          "package_name": "com.maythin.uitsmartbuilding"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406881431820-9j86nr9bd0tl1ptgo8mu9pfup309anhb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGE4Ibxg9jypUDvOqCS5EwV8XIEOm8hYo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

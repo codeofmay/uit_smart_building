@@ -1,0 +1,45 @@
+<resources>
+    <color name="colorPrimary">#424242</color>
+    <color name="colorPrimaryDark">#00838F</color>
+    <color name="primary_light">#00BCD4</color>
+    <color name="colorAccent">#c6c632</color>
+    <color name="colorAccentTransparent">#2a50bcb6</color>
+    <color name="colorCccent">#5DBCD2</color>
+    <color name="colorBccent">#0097A7</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="hint_text">#808080</color>
+    <color name="icons">#535252</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="background">#ececec</color>
+    <color name="colorText">#50bcb6</color>
+    <color name="greyText">#535252</color>
+    <color name="white">#ffffff</color>
+    <color name="white_transparent">#00ffffff</color>
+    <color name="black">#000000</color>
+    <color name="greyBackground">#E3E3E3</color>
+    <color name="addBackground">#dadada</color>
+    <color name="lightgrey">#d4f1f1f1</color>
+    <color name="darkgrey">#a64b4b4b</color>
+    <color name="disable">#535252</color>
+    <color name="greyCard">#94f9f7f7</color>
+    <color name="blue">#2979FF</color>
+    <color name="Red">#bcfd6776</color>
+    <color name="orange">#bcfdab67</color>
+    <color name="fb_blue">#3b5998</color>
+
+    <!--Nav theme colors-->
+    <color name="colorBackground">#2b2b2b</color>
+    <color name="colorDark">#262626</color>
+    <color name="colorDarker">#212121</color>
+    <color name="color_grey_transparent">#b5353535</color>
+    <color name="color_grey_transparent_camera">#9b878787</color>
+    <color name="color_white_transparent">#50898888</color>
+
+    <!-- Patient status -->
+    <color name="accepted">#bc69d77a</color>
+    <color name="pending">#bce9ca4d</color>
+    <color name="unrelated">#a3a3a3</color>
+
+
+</resources>
