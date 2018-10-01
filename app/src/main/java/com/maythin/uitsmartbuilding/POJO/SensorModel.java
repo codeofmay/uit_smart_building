@@ -4,7 +4,7 @@ package com.maythin.uitsmartbuilding.POJO;
  * Created by mt on 9/28/18.
  */
 
-public class SensorData {
+public class SensorModel {
     public int battery;
     public float temperature;
     public int light;

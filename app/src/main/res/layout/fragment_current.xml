@@ -25,7 +25,7 @@
             android:paddingTop="@dimen/simple_padding_larger"
             android:paddingBottom="20dp"
             android:textStyle="bold"
-            android:textColor="@color/addBackground"/>
+            android:textColor="@color/lightgrey"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:weightSum="4"
@@ -112,7 +112,7 @@
                         android:text="Temperature"
                         android:textSize="16dp"
                         android:layout_gravity="center"
-                        android:textColor="@color/lightgrey"
+                        android:textColor="@color/secondary_text"
                         android:layout_height="wrap_content" />
 
                 </LinearLayout>
@@ -174,7 +174,7 @@
                         android:text="Light"
                         android:textSize="16dp"
                         android:layout_gravity="center"
-                        android:textColor="@color/lightgrey"
+                        android:textColor="@color/secondary_text"
                         android:layout_height="wrap_content" />
 
                 </LinearLayout>

@@ -9,12 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.maythin.uitsmartbuilding.Package.TabPagerAdapter;
+import com.maythin.uitsmartbuilding.adapter.TabPagerAdapter;
 import com.maythin.uitsmartbuilding.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {

@@ -15,7 +15,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.maythin.uitsmartbuilding.POJO.SensorData;
+import com.maythin.uitsmartbuilding.POJO.SensorModel;
 import com.maythin.uitsmartbuilding.R;
 import com.maythin.uitsmartbuilding.databinding.FragmentCurrentBinding;
 
@@ -37,13 +37,13 @@ public class CurrentFragment extends Fragment {
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("SensorData");
+        DatabaseReference myRef = database.getReference("SensorModel");
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                /// This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                SensorData sensorData = dataSnapshot.getValue(SensorData.class);
+                SensorModel sensorData = dataSnapshot.getValue(SensorModel.class);
                 lab_temp.setText(sensorData.getTemperature()+"");
                 lab_battery.setText(sensorData.getBattery()+"");
                 lab_event.setText(sensorData.getEvent()+"");
