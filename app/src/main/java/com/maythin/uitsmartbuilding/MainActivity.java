@@ -9,8 +9,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.crashlytics.android.Crashlytics;
 import com.maythin.uitsmartbuilding.adapter.TabPagerAdapter;
 import com.maythin.uitsmartbuilding.databinding.ActivityMainBinding;
+import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         binding= DataBindingUtil.setContentView(this,R.layout.activity_main);
         viewPager=binding.container;
         tabPagerAdapter=new TabPagerAdapter(getSupportFragmentManager());
