@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.maythin.uitsmartbuilding.Fragments.AboutFragment;
 import com.maythin.uitsmartbuilding.Fragments.CurrentFragment;
 import com.maythin.uitsmartbuilding.Fragments.DashboardFragment;
 
@@ -23,6 +24,8 @@ public class TabPagerAdapter extends FragmentPagerAdapter {
                 return new CurrentFragment();
             case 1:
                 return new DashboardFragment();
+            case 2:
+                return new AboutFragment();
         }
         return null;
     }
@@ -30,6 +33,6 @@ public class TabPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 2;
+        return 3;
     }
 }

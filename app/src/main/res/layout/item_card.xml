@@ -5,20 +5,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/disable"
-        android:layout_margin="@dimen/simple_padding_small"
-        android:padding="@dimen/simple_padding_small">
+        android:layout_margin="@dimen/simple_padding_small">
 
-        <RelativeLayout
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="@dimen/simple_padding_medium"
-            android:paddingBottom="@dimen/simple_padding_medium">
-
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/linear_view"
+                android:layout_width="16dp"
+                android:background="@color/disable"
+                android:orientation="vertical"
+                android:layout_height="match_parent"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
+                android:paddingTop="@dimen/simple_padding_largish"
+                android:paddingBottom="@dimen/simple_padding_larger"
                 android:layout_marginStart="@dimen/simple_padding_large"
                 android:orientation="vertical">
 
@@ -29,27 +34,47 @@
                     android:ellipsize="end"
                     android:gravity="start"
                     android:lines="1"
-                    android:text="May Thin Khine"
                     android:textColor="@color/primary_text"
                     android:textSize="@dimen/text_size_primary"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/lab_company"
+                    android:id="@+id/lab_light"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:gravity="start"
                     android:lines="1"
-                    android:text="Company"
+                    android:textColor="@color/secondary_text"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="@dimen/text_size_secondary" />
+                <TextView
+                    android:id="@+id/lab_event"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:lines="1"
                     android:textColor="@color/secondary_text"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textSize="@dimen/text_size_secondary" />
 
+                <TextView
+                    android:id="@+id/lab_battery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:lines="1"
+                    android:textColor="@color/secondary_text"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="@dimen/text_size_secondary" />
+
+
             </LinearLayout>
 
-        </RelativeLayout>
+        </LinearLayout>
 
     </LinearLayout>
 </layout>

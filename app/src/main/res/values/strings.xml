@@ -1,12 +1,15 @@
 <resources>
-    <string name="app_name">UIT9  Smart Building</string>
+    <string name="app_name">UIT  Smart Building</string>
     <string name="title_home">Current</string>
     <string name="title_dashboard">Dashboard</string>
+    <string name="title_about">About</string>
     <string name="title_notifications">Notifications</string>
     <string name="temperature">Temperature</string>
     <string name="event">Event</string>
     <string name="light">Light</string>
     <string name="battery">Battery</string>
+    <string name="info">UIT Smart Building App present the conditions of the building from The Things Node.
+        The below lines indicate the motion of the device.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

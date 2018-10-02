@@ -1,18 +1,24 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tool="http://schemas.android.com/apk/res-auto">
-    <LinearLayout
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:background="@color/colorPrimary"
-        android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
 
-        tools:context="com.zwenex.androidtemplate.fragment.TwoFragment">
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_dashboard"
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/list_margin"
-            android:layout_marginRight="@dimen/list_margin"
-            tools:listitem="@layout/item_card"/>
-    </LinearLayout>
+
+            android:background="@color/colorPrimary">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_dashboard"
+                tools:listitem="@layout/item_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/list_margin"
+                android:layout_marginRight="@dimen/list_margin" />
+        </LinearLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
 </layout>

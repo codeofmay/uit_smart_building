@@ -1,212 +1,254 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:weightSum="5"
-    android:paddingLeft="@dimen/simple_padding_small"
-    android:paddingRight="@dimen/simple_padding_small"
-    android:background="@color/colorPrimary"
-    android:layout_height="match_parent">
 
-    <LinearLayout
-
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_current"
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_weight="2"
-        android:orientation="vertical"
-        android:layout_marginLeft="@dimen/simple_padding_small"
-        android:layout_marginRight="@dimen/simple_padding_small"
-        android:layout_height="0dp">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="28/9/2018"
-            android:textSize="32dp"
-            android:gravity="center"
-            android:paddingTop="@dimen/simple_padding_larger"
-            android:paddingBottom="20dp"
-            android:textStyle="bold"
-            android:textColor="@color/lightgrey"/>
+        android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:weightSum="4"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="72dp"
-            android:orientation="horizontal"
-            android:layout_marginLeft="@dimen/simple_padding_larger"
-            android:layout_marginRight="@dimen/simple_padding_larger"
-            android:layout_height="match_parent">
-            <LinearLayout
-                android:id="@+id/linear_interval"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:background="@color/disable"
-                android:layout_marginRight="@dimen/simple_padding_medium"
-                android:layout_height="match_parent"/>
-            <LinearLayout
-                android:id="@+id/linear_setup"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:background="@color/disable"
-                android:orientation="vertical"
-                android:layout_marginRight="@dimen/simple_padding_medium"
-                android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/simple_padding_small"
+            android:paddingRight="@dimen/simple_padding_small"
+            android:weightSum="5">
 
             <LinearLayout
-                android:id="@+id/linear_botton"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:background="@color/disable"
-                android:orientation="vertical"
-                android:layout_marginRight="@dimen/simple_padding_medium"
-                android:layout_height="match_parent"/>
 
-            <LinearLayout
-                android:id="@+id/linear_motion"
-                android:layout_width="0dp"
-                android:background="@color/disable"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_height="match_parent"/>
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/simple_padding_small"
+                android:layout_marginRight="@dimen/simple_padding_small"
+                android:layout_weight="2"
+                android:orientation="vertical">
 
+                <TextView
+                    android:id="@+id/lab_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="@dimen/simple_padding_larger"
+                    android:text="-/-/----"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="32dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/simple_padding_medium"
+                    android:paddingRight="@dimen/simple_padding_medium"
+                    android:text="@string/info"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/simple_padding_larger"
+                    android:layout_marginRight="@dimen/simple_padding_larger"
+                    android:orientation="horizontal"
+                    android:paddingBottom="28dp"
+                    android:paddingTop="28dp"
+                    android:weightSum="4">
+
+                    <LinearLayout
+                        android:id="@+id/linear_interval"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/simple_padding_medium"
+                        android:layout_weight="1"
+                        android:background="@color/disable"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_setup"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/simple_padding_medium"
+                        android:layout_weight="1"
+                        android:background="@color/disable"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_botton"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/simple_padding_medium"
+                        android:layout_weight="1"
+                        android:background="@color/disable"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_motion"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/disable"
+                        android:orientation="vertical" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="@dimen/simple_padding_small"
+                            android:layout_weight="1"
+                            android:background="@color/disable"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/lab_temp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:paddingBottom="@dimen/simple_padding_small"
+                                android:paddingTop="@dimen/simple_padding_large"
+                                android:text="0"
+                                android:textColor="@color/lightgrey"
+                                android:textSize="28dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Temperature"
+                                android:textColor="@color/secondary_text"
+                                android:textSize="16dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="@dimen/simple_padding_small"
+                            android:layout_weight="1"
+                            android:background="@color/disable"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/lab_event"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:paddingBottom="@dimen/simple_padding_small"
+                                android:paddingTop="@dimen/simple_padding_large"
+                                android:text="0"
+                                android:textColor="@color/lightgrey"
+                                android:textSize="28dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Event"
+                                android:textColor="@color/lightgrey"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="@dimen/simple_padding_small"
+                            android:layout_weight="1"
+                            android:background="@color/disable"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/lab_light"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:paddingBottom="@dimen/simple_padding_small"
+                                android:paddingTop="@dimen/simple_padding_large"
+                                android:text="0"
+                                android:textColor="@color/lightgrey"
+                                android:textSize="28dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Light"
+                                android:textColor="@color/secondary_text"
+                                android:textSize="16dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="@dimen/simple_padding_small"
+                            android:layout_weight="1"
+                            android:background="@color/disable"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/lab_battery"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:paddingBottom="@dimen/simple_padding_small"
+                                android:paddingTop="@dimen/simple_padding_large"
+                                android:text="0"
+                                android:textColor="@color/lightgrey"
+                                android:textSize="28dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Battery"
+                                android:textColor="@color/lightgrey"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
 
         </LinearLayout>
-
-    </LinearLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_weight="3"
-        android:layout_height="0dp">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:layout_height="match_parent">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:weightSum="2"
-                android:orientation="vertical"
-                android:layout_height="match_parent">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:background="@color/disable"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_margin="@dimen/simple_padding_small"
-                    android:layout_height="0dp">
-                    <TextView
-                        android:id="@+id/lab_temp"
-                        android:layout_width="wrap_content"
-                        android:text="0"
-                        android:textSize="28dp"
-                        android:layout_gravity="center"
-                        android:textStyle="bold"
-                        android:paddingTop="@dimen/simple_padding_large"
-                        android:paddingBottom="@dimen/simple_padding_small"
-                        android:textColor="@color/lightgrey"
-                        android:layout_height="wrap_content" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:text="Temperature"
-                        android:textSize="16dp"
-                        android:layout_gravity="center"
-                        android:textColor="@color/secondary_text"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:background="@color/disable"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_margin="@dimen/simple_padding_small"
-                    android:layout_height="0dp">
-                    <TextView
-                        android:id="@+id/lab_event"
-                        android:layout_width="wrap_content"
-                        android:text="0"
-                        android:textSize="28dp"
-                        android:layout_gravity="center"
-                        android:textStyle="bold"
-                        android:paddingTop="@dimen/simple_padding_large"
-                        android:paddingBottom="@dimen/simple_padding_small"
-                        android:textColor="@color/lightgrey"
-                        android:layout_height="wrap_content" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:text="Event"
-                        android:textSize="16dp"
-                        android:layout_gravity="center"
-                        android:textColor="@color/lightgrey"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:weightSum="2"
-                android:orientation="vertical"
-                android:layout_height="match_parent">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:background="@color/disable"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_margin="@dimen/simple_padding_small"
-                    android:layout_height="0dp">
-                    <TextView
-                        android:id="@+id/lab_light"
-                        android:layout_width="wrap_content"
-                        android:text="0"
-                        android:textSize="28dp"
-                        android:layout_gravity="center"
-                        android:textStyle="bold"
-                        android:paddingTop="@dimen/simple_padding_large"
-                        android:paddingBottom="@dimen/simple_padding_small"
-                        android:textColor="@color/lightgrey"
-                        android:layout_height="wrap_content" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:text="Light"
-                        android:textSize="16dp"
-                        android:layout_gravity="center"
-                        android:textColor="@color/secondary_text"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:background="@color/disable"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_margin="@dimen/simple_padding_small"
-                    android:layout_height="0dp">
-                    <TextView
-                        android:id="@+id/lab_battery"
-                        android:layout_width="wrap_content"
-                        android:text="0"
-                        android:textSize="28dp"
-                        android:layout_gravity="center"
-                        android:textStyle="bold"
-                        android:paddingTop="@dimen/simple_padding_large"
-                        android:paddingBottom="@dimen/simple_padding_small"
-                        android:textColor="@color/lightgrey"
-                        android:layout_height="wrap_content" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:text="Battery"
-                        android:textSize="16dp"
-                        android:layout_gravity="center"
-                        android:textColor="@color/lightgrey"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-    </RelativeLayout>
-</LinearLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
 </layout>
